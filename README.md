@@ -41,7 +41,7 @@ const GreetTool: Tool = {
         content: [
             {
                 type: "text",
-                text: `Hello, ${name}! 👋`
+                text: `Hello, ${name}!`
             }
         ]
     })
