@@ -1,14 +1,31 @@
 {
-  "name": "netmex-mcp",
+  "name": "@netmex/mcp",
   "version": "1.0.0",
   "type": "module",
-  "description": "A starter template for creating custom MCP servers with Netmex",
+  "description": "A lightweight developer-friendly MCP server toolkit with auto-loading tools.",
   "main": "dist/server.js",
+  "bin": {
+    "netmex-mcp": "dist/server.js"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "start": "node dist/server.js",
-    "build": "tsc"
+    "build": "tsc",
+    "prepare": "npm run build"
   },
-  "keywords": ["mcp", "netmex", "server", "template"],
+  "keywords": [
+    "mcp",
+    "modelcontext",
+    "ai",
+    "developer-tools",
+    "netmex",
+    "server",
+    "template"
+  ],
   "author": "Danny Verhoeven",
   "license": "MIT",
   "devDependencies": {
