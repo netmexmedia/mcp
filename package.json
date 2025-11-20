@@ -1,33 +1,35 @@
 {
   "name": "@netmex/mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "A lightweight developer-friendly MCP server toolkit with auto-loading tools.",
-  "main": "dist/server.js",
+
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./types": {
+      "import": "./dist/types/tool.js",
+      "types": "./dist/types/tool.d.ts"
+    }
+  },
   "bin": {
     "netmex-mcp": "dist/server.js"
   },
-  "files": [
-    "dist/",
-    "README.md",
-    "LICENSE"
-  ],
+  "files": ["dist", "README.md", "LICENSE"],
   "scripts": {
     "start": "node dist/server.js",
     "build": "tsc",
     "prepare": "npm run build"
   },
-  "keywords": [
-    "mcp",
-    "modelcontext",
-    "ai",
-    "developer-tools",
-    "netmex",
-    "server",
-    "template"
-  ],
+  "keywords": ["mcp", "modelcontext", "ai", "developer-tools", "netmex", "server", "template"],
   "author": "Danny Verhoeven",
   "license": "MIT",
+
   "devDependencies": {
     "@types/chokidar": "^2.1.7",
     "@types/node": "^24.10.1",
