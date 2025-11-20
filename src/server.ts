@@ -8,7 +8,7 @@ import type { Tool } from "./types/tool.js";
 console.error("Starting MCP Server...");
 
 // Load external tools
-const externalTools: Tool[] = loadTools();
+const externalTools: Tool[] = await loadTools();
 
 // Merge built-in and external tools
 const tools: Tool[] = [...builtinTools, ...externalTools];
