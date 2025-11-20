@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import 'ts-node/register';
 import { Server } from "@modelcontextprotocol/sdk/server/index.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { tools as builtinTools } from "./tools/index.js";
